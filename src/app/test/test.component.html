@@ -1,0 +1,28 @@
+
+<!-- *ngIf здесь выдаёт ощибку совместно с this.myCalendar.updateTodaysDate();
+пока что пусть будет [hidden] вместо *ngIf -->
+<div [hidden]="isLoadingPage">
+    <mat-card class="calendar-card">
+
+        <mat-calendar
+            (selectedChange)="onSelect($event)" 
+            [dateClass]="dateClass()"
+        ></mat-calendar>
+
+        <div class="actions_buttons">
+            <button [disabled]="isRequestToServer"
+                mat-raised-button color="primary" 
+                (click)="resetCalendar()"
+            >RESET</button>
+            <button [disabled]="isRequestToServer"
+                mat-raised-button color="primary" 
+                (click)="saveCalendar()"
+            >SAVE</button>
+        </div>
+
+    </mat-card>
+</div>
+
+<img *ngIf="isLoadingPage" class="img-loader" src="../assets/images/loader.gif" alt="loading...">
+
+<mat-error *ngIf="error">{{ error }}</mat-error>

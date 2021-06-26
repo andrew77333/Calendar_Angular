@@ -1,0 +1,15 @@
+{
+    "terminal.explorerKind": "external",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.fontSize": 16,
+    "window.zoomLevel": 2,
+    // Controls the font family.
+    // "editor.fontFamily": "Operator Mono",
+    // Controls the line height. Use 0 to compute the lineHeight from the fontSize.
+    "editor.lineHeight": 22,
+    // Enables font ligatures
+    "editor.fontLigatures": true,
+    // Controls if file decorations should use badges.
+    "explorer.decorations.badges": false
+}
+// ctrl + shift + f   автоформат
